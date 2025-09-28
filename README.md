@@ -16,8 +16,5 @@ Este repositório contém a implementação da minha primeira stack usando AWS C
 - `imagens/` → Evidências de execução
 - `README.md` → Documentação do projeto
 
-## 📷 Evidências
-Adicione aqui as capturas de tela da sua stack criada na AWS.
-
 ---
 Feito com ☁️ AWS CloudFormation
