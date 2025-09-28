@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Minha Primeira Stack com AWS CloudFormation
+
+Resources:
+
+  MeuBucketS3:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "meu-primeiro-bucket-${AWS::AccountId}"
+
+  MinhaInstanciaEC2:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-0c55b159cbfafe1f0  # Amazon Linux 2 (exemplo, pode variar por região)
+      Tags:
+        - Key: Name
+          Value: MinhaPrimeiraInstancia
+
+Outputs:
+  NomeDoBucket:
+    Description: Nome do bucket S3 criado
+    Value: !Ref MeuBucketS3
+
+  IdDaInstancia:
+    Description: ID da instância EC2 criada
+    Value: !Ref MinhaInstanciaEC2
